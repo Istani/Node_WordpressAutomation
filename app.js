@@ -30,8 +30,10 @@ var client = wordpress.createClient({
 });
 
 var cron = require("node-cron");
-cron.schedule("0 0 16 * * 0", () => {
+cron.schedule("0 0 17 * * 0", () => {
   new_post_file("Twitter Selfie Collection", "/media/dropbox/IFTTT/Twitter/dailyselfie.txt", "T07:00:00");
+});
+cron.schedule("0 5 17 * * 0", () => {
   new_post_file("Twitter Favoriten", "/media/dropbox/IFTTT/Twitter/TwitterFav.txt", "T08:00:00");
 });
 
